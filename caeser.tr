@@ -1,0 +1,16 @@
+v 0.10000000000000001 eval {set sim_annotation {Encrypted Communication Started}}
+v 0.14999999999999999 eval {set sim_annotation {Packet sent by 0: {Hello Cruel World}}}
+v 0.14999999999999999 eval {set sim_annotation {Encoded Packet sent by 0: {Khoor Fuxho Zruog}}}
++ 0.15 0 1 udp 999 ------- 0 0.0 1.0 0 0
+- 0.15 0 1 udp 999 ------- 0 0.0 1.0 0 0
+r 0.26332 0 1 udp 999 ------- 0 0.0 1.0 0 0
+v 0.26332 eval {set sim_annotation {Packet recieved by 1: {Khoor Fuxho Zruog}}}
+v 0.26332 eval {set sim_annotation {Decoded Packet recieved by 1: {Hello Cruel World}}}
+v 0.34999999999999998 eval {set sim_annotation {Packet sent by 1: {Bye Cruel World}}}
+v 0.34999999999999998 eval {set sim_annotation {Encoded Packet sent by 1: {Ebh Fuxho Zruog}}}
++ 0.35 1 0 udp 999 ------- 1 1.0 0.0 0 1
+- 0.35 1 0 udp 999 ------- 1 1.0 0.0 0 1
+r 0.46332 1 0 udp 999 ------- 1 1.0 0.0 0 1
+v 0.46331999999999995 eval {set sim_annotation {Packet recieved by 0: {Ebh Fuxho Zruog}}}
+v 0.46331999999999995 eval {set sim_annotation {Decoded Packet recieved by 0: {Bye Cruel World}}}
+v 0.5 eval {set sim_annotation {Encrypted Communication Over}}

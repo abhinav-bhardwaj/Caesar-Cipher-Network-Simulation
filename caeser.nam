@@ -1,0 +1,26 @@
+n -t 0 -s 0 -S DLABEL -l "Encrypted Node A" -L ""
+n -t 0 -s 1 -S DLABEL -l "Encrypted Node B" -L ""
+V -t * -v 1.0a5 -a 0
+A -t * -n 1 -p 0 -o 0x7fffffff -c 30 -a 1
+A -t * -h 1 -m 1073741823 -s 0
+n -t * -a 0 -s 0 -S UP -v circle -c red -i red
+n -t * -a 1 -s 1 -S UP -v circle -c black -i black
+l -t * -s 0 -d 1 -S UP -r 600000 -D 0.10000000000000001 -c black
+v -t 0.1 -e sim_annotation 0.1 1 Encrypted Communication Started
+v -t 0.15 -e sim_annotation 0.15 2 Packet sent by 0: {Hello Cruel World}
+v -t 0.15 -e sim_annotation 0.15 3 Encoded Packet sent by 0: {Khoor Fuxho Zruog}
++ -t 0.15 -s 0 -d 1 -p udp -e 999 -c 0 -i 0 -a 0 -x {0.0 1.0 0 ------- null}
+- -t 0.15 -s 0 -d 1 -p udp -e 999 -c 0 -i 0 -a 0 -x {0.0 1.0 0 ------- null}
+h -t 0.15 -s 0 -d 1 -p udp -e 999 -c 0 -i 0 -a 0 -x {0.0 1.0 -1 ------- null}
+r -t 0.26332 -s 0 -d 1 -p udp -e 999 -c 0 -i 0 -a 0 -x {0.0 1.0 0 ------- null}
+v -t 0.26332 -e sim_annotation 0.26332 4 Packet recieved by 1: {Khoor Fuxho Zruog}
+v -t 0.26332 -e sim_annotation 0.26332 5 Decoded Packet recieved by 1: {Hello Cruel World}
+v -t 0.35 -e sim_annotation 0.35 6 Packet sent by 1: {Bye Cruel World}
+v -t 0.35 -e sim_annotation 0.35 7 Encoded Packet sent by 1: {Ebh Fuxho Zruog}
++ -t 0.35 -s 1 -d 0 -p udp -e 999 -c 1 -i 1 -a 1 -x {1.0 0.0 0 ------- null}
+- -t 0.35 -s 1 -d 0 -p udp -e 999 -c 1 -i 1 -a 1 -x {1.0 0.0 0 ------- null}
+h -t 0.35 -s 1 -d 0 -p udp -e 999 -c 1 -i 1 -a 1 -x {1.0 0.0 -1 ------- null}
+r -t 0.46332 -s 1 -d 0 -p udp -e 999 -c 1 -i 1 -a 1 -x {1.0 0.0 0 ------- null}
+v -t 0.46332 -e sim_annotation 0.46332 8 Packet recieved by 0: {Ebh Fuxho Zruog}
+v -t 0.46332 -e sim_annotation 0.46332 9 Decoded Packet recieved by 0: {Bye Cruel World}
+v -t 0.5 -e sim_annotation 0.5 10 Encrypted Communication Over
