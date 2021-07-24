@@ -6,4 +6,5 @@
 - 
 ## Usage
 `ns xor.tcl`
+
 `nam xor.nam`
