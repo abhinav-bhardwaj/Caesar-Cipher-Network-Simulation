@@ -5,6 +5,6 @@
 - Nam 1.15 (Network Animator Version 1.15)
 
 ## Usage
-`ns xor.tcl`
+`ns caesar.tcl`
 
-`nam xor.nam`
+`nam caesar.nam`
